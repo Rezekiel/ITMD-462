@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en" class="nojs">
+<head>
+    <title>Lab 2</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+    <link rel="stylesheet" media="screen" href="css/screen.css" />
+    <link rel="stylesheet" media="screen" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+</head>
+<body>
+    <div class="top">
+        <p> ITMD-456 Lab 1-Raymond Ezekiel- rezekiel@hawk.iit.edu</p>
+        <h1> Sales Tax Calculator </h1>
+    </div>
+    <fieldset>
+        <form id="join" method="get" action="#null" autocomplete="on">
+            <p> Enter a Subtotal and Tax Rate then click the Calculate button to show the sale tax amount and the total. Click the clear button to clear out all form fields. Tax rate should be a percentage but do not enter a "%" sign in the Tax Rate box.</p>
+            <label for="name">Subtotal:</label>
+            <input type="text" id="sub" name="sub">
+            <label for="rate">Tax Rate:</label>
+            <input type="text" id="rate" name="rate">
+            <label for="stax">Sales Tax: </label>
+            <input type="text" id="stax" name="stax" value="" disabled>
+            <label for="total">Total: </label>
+            <input type="text" id="total" name="total" value="" onclick="calc" disabled>
+            <!-- create calcualate and clear buttons -->
+            <button type="button" onclick="calc();">Fuck You</button>
+            <input type="submit" value="Clear" id="clear">
+        </form>
+    </fieldset>
+    <!-- image for form -->
+    <div class="calcimg">
+        <img src="calc.jfif" alt="Calculator" />
+    </div>
+    <footer>
+        <p>©2020 Raymond Ezekiel | rezekiel@hawk.iit.edu</p>
+    </footer>
+</body>
+<script>
+    function $(id) {
+        return document.getElementById(id);
+    }
+    //function calc to calculate the sales tax total
+    function calc() {
+        var subTotal = parseFloat(document.getElementById("sub").value);
+        var rateT = parseFloat(document.getElementById("rate").value);
+        //checking subtotal and tax rate value
+        //create alert to warn user of wrong number
+        if (subTotal <= 0) {
+            alert("SubTotal needs to be a positive number");
+            return;
+        }
+        if (rateT <= 0 || rateT > 12) {
+            alert("The Tax Rate Value must be a number greater than 0 and less than or equal to 20");
+            return;
+        }
+        var salesTax = (subTotal * rateT) / 100;
+        var TTax = subTotal + salesTax;
+        document.getElementById("total").value = parseFloat(TTax);
+        document.getElementById("stax").value = parseFloat(salesTax);
+        document.getElementById("sub").focus();
+        console.log("executed calculations");
+    }
+    console.log("End of script");
+    document.getElementById("calculate").addEventListener("click", calc());
+    document.getElementById("clear").addEventListener("click", function () {
+        $("sub").value = "";
+        $("rate").value = "";
+        $("stax").value = "";
+        $("total").value = "";
+        $("sub").focus();
+    });
+    console.log("End of script");
+</script>
+</html>
