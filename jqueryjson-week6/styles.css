@@ -1,0 +1,56 @@
+body{
+    margin:0;
+    background-color: cornflowerblue;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(to bottom right,cornflowerblue, rgb(179, 179, 95));
+}
+
+.form{
+background-color: lightslategrey;
+border-top: 3px solid darkslategrey;    
+border-bottom: 3px solid darkslategrey;    
+width:500px;
+height:200px;
+margin-left: auto;
+margin-right:auto;
+display: flex;
+flex-direction: column;
+padding: 40px;
+  font: 1em sans-serif;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+
+}
+#submitbtn{
+    width: 100px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10px;
+}
+input{
+    text-align: center;
+    color: gray;
+    width: 60%;
+    margin: auto;
+border-radius: 3px;
+border: 2px solid rgb(223, 223, 223);
+padding: 5px;
+}
+label{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+button{
+
+    padding: 8px;
+    color: white;
+    background-color: rgb(158, 166, 172);
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 0px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-image: linear-gradient(to top, rgb(158, 166, 172), rgb(223, 213, 213));
+}

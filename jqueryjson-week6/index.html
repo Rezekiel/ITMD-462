@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON AND JQUERY-WEEK6-RE</title>
+    <!-- import our locally stored script files; jquery and script js -->
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Favorite Number Questionnaire</h1>
+    <h2>JSON & JQUERY</h2>
+
+    <!--create a form section; enable user to input their name and favorite number-->
+    <form action="" class="form">
+        <!--label/input type for the user's name and number-->
+        <label for="fname"> First Name: </label>
+        <input type="text" id="fname" name="fname" value="Raymond">
+        <label for="lname"> Last Name: </label>
+        <input type="text" id="lname" name="lname" value="Ezekiel">
+        <label for="favnum"> Favourite Number: </label>
+        <input type="number" id="favnum" name="favnum" value="">
+        <!-- submit button to send the user's input-->
+        <button id="submitbtn">Submit </button>
+    </form>
+    <!-- display button reveals the stored results from above -->
+    
+    <button id="displaybtn">Display Results</button>
+      <!--displays code in this p space -->
+   <p id="displace">  <br>Results- Current Data saved in JSON Objects Fomrat: </br></p> 
+</body>
+</html>
